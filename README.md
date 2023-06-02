@@ -1,5 +1,6 @@
 # Methods
 `modules.indicator_management.IndicatorManagement.__init__()`
+
 Initialize IndicatorManagement class
 ```
 Kwargs:
@@ -8,6 +9,7 @@ Kwargs:
 ```
 
 `modules.indicator_management.IndicatorManagement.get_access_details()`
+
 This function retrieves the access details for a specific user and pine script.
 ```
 Kwargs: 
@@ -16,6 +18,7 @@ Kwargs:
 ```
 
 `modules.indicator_management.IndicatorManagement.add_access()`
+
 This function adds access for a user to a Pine script.
 ```
 Kwargs:
@@ -25,6 +28,7 @@ Kwargs:
 ```
 
 `modules.indicator_management.IndicatorManagement.remove_access()`
+
 This function removes access for a user to a Pine script.
 ```
 Kwargs:
@@ -32,6 +36,7 @@ Kwargs:
 ```
 
 `modules.indicator_management.IndicatorManagement.validate_username()`
+
 This function validates a TradingView username by checking if it exists on TradingView.
 ```
 Kwargs:
@@ -49,6 +54,7 @@ Kwargs:
 	"currentExpiration":"2023-06-02 00:11:55.976542+00:00"
 }
 ```
+
 If the user is whitelisted, the response is as shown below.
 ```json
 {
@@ -60,7 +66,7 @@ If the user is whitelisted, the response is as shown below.
 }
 ```
 
-``modules.indicator_management.IndicatorManagement.add_access()`
+`modules.indicator_management.IndicatorManagement.add_access()`
 ```json
 {
 	"pine_id":"PUB;1f7c1407d82a4a32bff39c1c9a38a290",
@@ -72,6 +78,7 @@ If the user is whitelisted, the response is as shown below.
 	"status":"Success"
 }
 ```
+
 If the user is whitelisted, the response is as shown below.
 ```json
 {
@@ -96,6 +103,7 @@ If the user is whitelisted, the response is as shown below.
 	"status":"Success"
 }
 ```
+
 If the user is whitelisted, the response is as shown below.
 ```json
 {
@@ -115,6 +123,7 @@ If the user is whitelisted, the response is as shown below.
 	"verifiedUserName":"Chuti"
 }
 ```
+
 If you pass an invalid user, the response is as shown below.
 ```json
 {
