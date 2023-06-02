@@ -1,5 +1,45 @@
+# Methods
+`modules.indicator_management.IndicatorManagement.__init__()`
+Initialize IndicatorManagement class
+```
+Kwargs:
+    username : This is your TradingView username. You'll need this to log into TradingView if the provided session ID is not valid.
+    password : This is your TradingView password. You'll need this to log into TradingView if the provided session ID is not valid.
+```
+
+`modules.indicator_management.IndicatorManagement.get_access_details()`
+This function retrieves the access details for a specific user and pine script.
+```
+Kwargs: 
+    username : This is the username of the TradingView user for whom you want to retrieve access details.
+    pine_id  : This is the ID of the Pine script for which you want to retrieve access details.
+```
+
+`modules.indicator_management.IndicatorManagement.add_access()`
+This function adds access for a user to a Pine script.
+```
+Kwargs:
+    access_details   : This is a dictionary containing the access details for a user and Pine script. You can obtain this from the get_access_details function.
+    extension_type   : This is a string indicating the type of extension you want to add. It can be 'Y' for years, 'M' for months, 'W' for weeks, 'D' for days, or 'L' for lifetime.
+    extension_length : This is an integer indicating the length of the extension. For example, if extension_type is 'M' and extension_length is 3, this would add a 3-month extension.
+```
+
+`modules.indicator_management.IndicatorManagement.remove_access()`
+This function removes access for a user to a Pine script.
+```
+Kwargs:
+    access_details: This is a dictionary containing the access details for a user and Pine script. You can obtain this from the get_access_details function.
+```
+
+`modules.indicator_management.IndicatorManagement.validate_username()`
+This function validates a TradingView username by checking if it exists on TradingView.
+```
+Kwargs:
+    username : The TradingView username to validate.
+```
+
 # Response examples
-`modules.indicator_management.get_access_details()`
+`modules.indicator_management.IndicatorManagement.get_access_details()`
 ```json
 {
 	"pine_id":"PUB;1f7c1407d82a4a32bff39c1c9a38a290",
@@ -20,7 +60,7 @@ If the user is whitelisted, the response is as shown below.
 }
 ```
 
-`modules.indicator_management.add_access()`
+``modules.indicator_management.IndicatorManagement.add_access()`
 ```json
 {
 	"pine_id":"PUB;1f7c1407d82a4a32bff39c1c9a38a290",
@@ -45,7 +85,7 @@ If the user is whitelisted, the response is as shown below.
 }
 ```
 
-`modules.indicator_management.remove_access()`
+`modules.indicator_management.IndicatorManagement.remove_access()`
 ```json
 {
 	"pine_id":"PUB;1f7c1407d82a4a32bff39c1c9a38a290",
@@ -68,7 +108,7 @@ If the user is whitelisted, the response is as shown below.
 }
 ```
 
-`modules.indicator_management.validate_username()`
+`modules.indicator_management.IndicatorManagement.validate_username()`
 ```json
 {
 	"validuser":true,
