@@ -67,3 +67,18 @@ If the user is whitelisted, the response is as shown below.
 	"status":"Success"
 }
 ```
+
+`modules.indicator_management.validate_username()`
+```json
+{
+	"validuser":true,
+	"verifiedUserName":"Chuti"
+}
+```
+If you pass an invalid user, the response is as shown below.
+```json
+{
+	"validuser":false,
+	"verifiedUserName":""
+}
+```
