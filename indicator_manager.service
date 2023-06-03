@@ -1,0 +1,15 @@
+[Unit]
+Description=(API) Indicator Manager
+After=network.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/.../IndicatorManager
+ExecStart=/root/.../IndicatorManager/venv/bin/python3 /root/.../IndicatorManager/main.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

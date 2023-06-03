@@ -1,5 +1,55 @@
+# API Endpoints
+<h4><u>GET indicator_manager/access_details/{username}</u></h4>
+Stuff
+<br></br>
+
+<h4><u>POST indicator_manager/add</u></h4>
+<b>Headers</b>
+
+```json
+{
+    "TRADINGVIEW-USERNAME": "",
+    "TRADINGVIEW-PASSWORD": ""
+}
+```
+
+**Payload**
+```json
+{
+    "username": "",
+    "pine_id": "",
+    "extension_type": "",
+    "extension_length": "" // Ignored if 'extension_type' == 'L'
+}
+```
+
+<h4><u>POST indicator_manager/remove</u></h4>
+<b>Headers</b>
+
+```json
+{
+    "TRADINGVIEW-USERNAME": "",
+    "TRADINGVIEW-PASSWORD": ""
+}
+```
+
+**Payload**
+```json
+{
+    "username": "",
+    "pine_id": "",
+    "extension_type": "",
+    "extension_length": "" // Ignored if 'extension_type' == 'L'
+}
+```
+
+<h4><u>GET indicator_manager/validate/{username}</u></h4>
+
+Can be used to validate username. This can be handy operation to execute before trying to execute access management for the user. If user is not valid, we can stop the workflow then and there.
+
+
 # Methods
-`modules.indicator_management.IndicatorManagement.__init__()`
+<i>`modules.indicator_management.IndicatorManagement.__init__()`</i>
 
 Initialize IndicatorManagement class
 ```
@@ -8,7 +58,9 @@ Kwargs:
     password : This is your TradingView password. You'll need this to log into TradingView if the provided session ID is not valid.
 ```
 
-`modules.indicator_management.IndicatorManagement.get_access_details()`
+---
+
+<i>`modules.indicator_management.IndicatorManagement.get_access_details()`</i>
 
 This function retrieves the access details for a specific user and pine script.
 ```
@@ -17,7 +69,9 @@ Kwargs:
     pine_id  : This is the ID of the Pine script for which you want to retrieve access details.
 ```
 
-`modules.indicator_management.IndicatorManagement.add_access()`
+---
+
+<i>`modules.indicator_management.IndicatorManagement.add_access()`</i>
 
 This function adds access for a user to a Pine script.
 ```
@@ -27,7 +81,9 @@ Kwargs:
     extension_length : This is an integer indicating the length of the extension. For example, if extension_type is 'M' and extension_length is 3, this would add a 3-month extension.
 ```
 
-`modules.indicator_management.IndicatorManagement.remove_access()`
+---
+
+<i>`modules.indicator_management.IndicatorManagement.remove_access()`</i>
 
 This function removes access for a user to a Pine script.
 ```
@@ -35,7 +91,9 @@ Kwargs:
     access_details: This is a dictionary containing the access details for a user and Pine script. You can obtain this from the get_access_details function.
 ```
 
-`modules.indicator_management.IndicatorManagement.validate_username()`
+---
+
+<i>`modules.indicator_management.IndicatorManagement.validate_username()`</i>
 
 This function validates a TradingView username by checking if it exists on TradingView.
 ```
@@ -44,7 +102,7 @@ Kwargs:
 ```
 
 # Response examples
-`modules.indicator_management.IndicatorManagement.get_access_details()`
+<i>`modules.indicator_management.IndicatorManagement.get_access_details()`</i>
 ```json
 {
 	"pine_id":"PUB;1f7c1407d82a4a32bff39c1c9a38a290",
@@ -66,7 +124,7 @@ If the user is whitelisted, the response is as shown below.
 }
 ```
 
-`modules.indicator_management.IndicatorManagement.add_access()`
+<i>`modules.indicator_management.IndicatorManagement.add_access()`</i>
 ```json
 {
 	"pine_id":"PUB;1f7c1407d82a4a32bff39c1c9a38a290",
@@ -92,7 +150,7 @@ If the user is whitelisted, the response is as shown below.
 }
 ```
 
-`modules.indicator_management.IndicatorManagement.remove_access()`
+<i>`modules.indicator_management.IndicatorManagement.remove_access()`</i>
 ```json
 {
 	"pine_id":"PUB;1f7c1407d82a4a32bff39c1c9a38a290",
@@ -104,7 +162,7 @@ If the user is whitelisted, the response is as shown below.
 }
 ```
 
-If the user is whitelisted, the response is as shown below.
+If the user isn't whitelisted, the response is as shown below.
 ```json
 {
 	"pine_id":"PUB;1f7c1407d82a4a32bff39c1c9a38a290",
@@ -116,7 +174,7 @@ If the user is whitelisted, the response is as shown below.
 }
 ```
 
-`modules.indicator_management.IndicatorManagement.validate_username()`
+<i>`modules.indicator_management.IndicatorManagement.validate_username()`</i>
 ```json
 {
 	"validuser":true,
