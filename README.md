@@ -14,7 +14,7 @@ Stuff
 ```
 
 **Payload**
-```json
+```jsonc
 {
     "username": "",
     "pine_id": "",
@@ -34,7 +34,7 @@ Stuff
 ```
 
 **Payload**
-```json
+```jsonc
 {
     "username": "",
     "pine_id": "",
